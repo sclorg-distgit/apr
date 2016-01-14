@@ -1,0 +1,13 @@
+diff --git a/Makefile.in b/Makefile.in
+index 0b47a79..39ceeed 100644
+--- a/Makefile.in
++++ b/Makefile.in
+@@ -97,7 +97,7 @@ install: $(TARGETS)
+ 	fi
+ 
+ $(TARGET_LIB): $(OBJECTS)
+-	$(LINK) @lib_target@ $(ALL_LIBS)
++	$(LINK) -release httpd24 @lib_target@ $(ALL_LIBS)
+ 
+ encoding/apr_escape.lo: include/private/apr_escape_test_char.h 
+ 
